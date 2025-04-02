@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'login_screen.dart';
 import 'dashboard_screen.dart';
 import 'monitoring_screen.dart';
-import 'charger_screen.dart';
+// import 'charger_screen.dart';
 import 'station_screen.dart';
 import 'simple_screen.dart';
 
@@ -25,7 +25,7 @@ class _MainScreenState extends State<MainScreen> {
     // 모니터링 화면
     const MonitoringScreen(),
     // 충전기 화면
-    const ChargerScreen(),
+    // const ChargerScreen(),
     // 충전소 화면
     const StationScreen(),
     // 간편장애접수 화면
@@ -194,25 +194,26 @@ class _MainScreenState extends State<MainScreen> {
             ),
             label: '이력조회',
           ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/images/ic_outline-ev-station.svg',
-              height: 24,
-              colorFilter: ColorFilter.mode(
-                _selectedIndex == 2 ? const Color(0xFF1E4889) : Colors.grey,
-                BlendMode.srcIn,
-              ),
-            ),
-            activeIcon: SvgPicture.asset(
-              'assets/images/ic_baseline-ev-station.svg',
-              height: 24,
-              colorFilter: const ColorFilter.mode(
-                Color(0xFF1E4889),
-                BlendMode.srcIn,
-              ),
-            ),
-            label: '충전기 관리',
-          ),
+          // 충전기 관리 Web 기능 추가 후 사용
+          // BottomNavigationBarItem(
+          //   icon: SvgPicture.asset(
+          //     'assets/images/ic_outline-ev-station.svg',
+          //     height: 24,
+          //     colorFilter: ColorFilter.mode(
+          //       _selectedIndex == 2 ? const Color(0xFF1E4889) : Colors.grey,
+          //       BlendMode.srcIn,
+          //     ),
+          //   ),
+          //   activeIcon: SvgPicture.asset(
+          //     'assets/images/ic_baseline-ev-station.svg',
+          //     height: 24,
+          //     colorFilter: const ColorFilter.mode(
+          //       Color(0xFF1E4889),
+          //       BlendMode.srcIn,
+          //     ),
+          //   ),
+          //   label: '충전기 관리',
+          // ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
               'assets/images/mage_map-marker.svg',
